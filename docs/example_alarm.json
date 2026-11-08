@@ -1,0 +1,39 @@
+{
+  "schema": "frost-alarm/1",
+  "station": "VIS",
+  "night": "2024-04-18",
+  "issued_at": "2024-04-18T18:00",
+  "update_index": 0,
+  "level": "alarm",
+  "alarm": true,
+  "threshold_c": 0.0,
+  "tmin_forecast_c": -1.6,
+  "tmin_interval_c": [
+    -4.4,
+    1.1
+  ],
+  "interval_level": 0.8,
+  "p_frost": {
+    "0": 0.773,
+    "-1": 0.613,
+    "-2": 0.43
+  },
+  "confidence": "low",
+  "hysteresis": {
+    "p_on": 0.19,
+    "p_off": 0.095,
+    "off_updates": 2,
+    "state_before": "off",
+    "state_after": "on"
+  },
+  "start_protection_at": "2024-04-19T01:10",
+  "start_protection_trigger_c": 1.0,
+  "recommendation": "Frost expected. Prepare protection now (for example frost candles or heaters, wind machines, overhead sprinklers where available) and start when the 2 m air temperature at the plot reaches 1.0 C. Check the critical temperature of the current bud stage.",
+  "sms": "FROST ALARM VIS 2024-04-18: Tmin -1.6C, P(<=0C) 77%, conf low. Start protection 01:10.",
+  "mqtt": {
+    "topic": "frost/vis/alarm",
+    "qos": 1,
+    "retain": true,
+    "payload": "{\"schema\": \"frost-alarm/1\", \"station\": \"VIS\", \"night\": \"2024-04-18\", \"issued_at\": \"2024-04-18T18:00\", \"update_index\": 0, \"level\": \"alarm\", \"alarm\": true, \"threshold_c\": 0.0, \"tmin_forecast_c\": -1.6, \"tmin_interval_c\": [-4.4, 1.1], \"interval_level\": 0.8, \"p_frost\": {\"0\": 0.773, \"-1\": 0.613, \"-2\": 0.43}, \"confidence\": \"low\", \"hysteresis\": {\"p_on\": 0.19, \"p_off\": 0.095, \"off_updates\": 2, \"state_before\": \"off\", \"state_after\": \"on\"}, \"start_protection_at\": \"2024-04-19T01:10\", \"start_protection_trigger_c\": 1.0, \"recommendation\": \"Frost expected. Prepare protection now (for example frost candles or heaters, wind machines, overhead sprinklers where available) and start when the 2 m air temperature at the plot reaches 1.0 C. Check the critical temperature of the current bud stage.\"}"
+  }
+}

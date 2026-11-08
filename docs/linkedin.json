@@ -1,0 +1,13 @@
+{
+  "claim": "An evening frost forecast flagged 84% of frost nights, but 47% of its alarms were false.",
+  "data_label": "open data: MeteoSwiss, 6 stations, springs 2021-2026 held out | swisstopo terrain",
+  "stats": [
+    ["84%", "frost nights flagged (Tmin <= 0 C)", "green"],
+    ["47%", "alarms that were false", "amber"],
+    ["9.0 h", "median lead time", "accent"]
+  ],
+  "limit": "Terrain map offset is an assumed value; no plot loggers or real bud damage were checked.",
+  "alt": "Left: shaded terrain map of the Visp valley coloured by frost probability for the night of 25 April 2024, higher on the valley floor. Right: forecast and observed minimum temperature at Visp from 15 April to 1 May 2024, with alarm markers on the frost nights.",
+  "hashtags": ["#Viticulture", "#FrostProtection", "#AgTech", "#Python", "#OpenData", "#MachineLearning"],
+  "post": "A spring frost night can wipe out a vineyard's buds, and the call to start protection has to be made in the evening, hours before the cold arrives.\n\nI built an open-source forecaster for that call. At 18:00 it reads weather-station data, forecasts the night's minimum temperature with a radiative-cooling baseline plus gradient boosting, and gives a frost probability, a start time for protection and a terrain-based risk map. Data is open MeteoSwiss station data from six valley stations, trained on 2010-2020 and tested on the springs of 2021-2026.\n\nMeasured on the held-out nights: minimum temperature error 1.75 K at 18:00 (2.37 K for simple persistence, 2.71 K for climatology). It flagged 84% of nights with a minimum at or below 0 C, with a median lead time of 9 h. The price: 47% of its alarms were false. In the April 2024 cold spell it alarmed all 7 frost nights across the stations, with 23 false alarms.\n\nWhat is not verified: the risk map's terrain offset is an assumption, nothing was checked with loggers at a real plot, and the damage threshold depends on bud stage.\n\nIf you protect orchards or vines, how many false alarms per real frost night would you accept before you stopped trusting the warning?\n\nCode: https://github.com/Usernamepersonperson/frost-night-forecaster"
+}

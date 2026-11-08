@@ -1,0 +1,497 @@
+{
+  "train_seasons": [
+    2010,
+    2020
+  ],
+  "test_seasons": [
+    2021,
+    2026
+  ],
+  "stations": [
+    "SIO",
+    "VIS",
+    "AIG",
+    "CGI",
+    "MAG",
+    "CHU"
+  ],
+  "p_on": {
+    "0": 0.19,
+    "-1": 0.17,
+    "-2": 0.15
+  },
+  "n_test_nights": 3304,
+  "n_train_nights": 6071,
+  "tmin_18": {
+    "climatology": {
+      "mae": 2.7089872873839287,
+      "rmse": 3.3323828488669394,
+      "bias": -0.13584505206671196
+    },
+    "persistence": {
+      "mae": 2.3664163386287873,
+      "rmse": 3.109904779426263,
+      "bias": -0.12087201785733526
+    },
+    "radiative_baseline": {
+      "mae": 2.1519740106439347,
+      "rmse": 2.6959489352067756,
+      "bias": 0.27238326002814206
+    },
+    "ridge": {
+      "mae": 1.8170459390130087,
+      "rmse": 2.2870058975965497,
+      "bias": 0.05773377353984645
+    },
+    "baseline_plus_gbm": {
+      "mae": 1.752796498399691,
+      "rmse": 2.176832938337235,
+      "bias": 0.1395376115395547
+    }
+  },
+  "tmin_18_by_station": {
+    "AIG": {
+      "n": 552,
+      "model_mae": 1.7999609192720527,
+      "persistence_mae": 2.3585338075447573,
+      "climatology_mae": 2.7986949911721113
+    },
+    "CGI": {
+      "n": 552,
+      "model_mae": 1.406647647397824,
+      "persistence_mae": 2.0864683903452685,
+      "climatology_mae": 2.4509956965226625
+    },
+    "CHU": {
+      "n": 551,
+      "model_mae": 1.3516552048458124,
+      "persistence_mae": 2.06860921319526,
+      "climatology_mae": 2.576711371094417
+    },
+    "MAG": {
+      "n": 549,
+      "model_mae": 2.0101741902600434,
+      "persistence_mae": 2.5122876660119573,
+      "climatology_mae": 2.8106183450674744
+    },
+    "SIO": {
+      "n": 552,
+      "model_mae": 1.8162405146224385,
+      "persistence_mae": 2.2716522138746797,
+      "climatology_mae": 2.5958574531085787
+    },
+    "VIS": {
+      "n": 548,
+      "model_mae": 2.1355461487525824,
+      "persistence_mae": 2.9051035445697857,
+      "climatology_mae": 3.0236386621860984
+    }
+  },
+  "tmin_18_frost_nights": {
+    "n": 350,
+    "model_mae": 2.1705968855988127,
+    "persistence_mae": 2.3799800420168067,
+    "climatology_mae": 4.337316749376109
+  },
+  "tmin_by_issue_hour": {
+    "18:00": {
+      "model_mae": 1.752796498399691,
+      "persistence_mae": 2.3664163386287873,
+      "n": 3304
+    },
+    "21:00": {
+      "model_mae": 1.5919282630522444,
+      "persistence_mae": 2.369970207258288,
+      "n": 3304
+    },
+    "00:00": {
+      "model_mae": 1.2350890929798923,
+      "persistence_mae": 2.3817290794246015,
+      "n": 3304
+    }
+  },
+  "frost_18": {
+    "0": {
+      "threshold": 0.0,
+      "tp": 294,
+      "fp": 262,
+      "fn": 56,
+      "tn": 2692,
+      "n_frost": 350,
+      "n_nights": 3304,
+      "hit_rate": 0.84,
+      "false_alarm_ratio": 0.4712230215827338,
+      "false_positive_rate": 0.08869329722410291,
+      "p_on": 0.19,
+      "brier": 0.050863636295196184,
+      "brier_climatology_rate": 0.09471057167480611,
+      "persistence_alarm": {
+        "threshold": 0.0,
+        "tp": 195,
+        "fp": 161,
+        "fn": 155,
+        "tn": 2793,
+        "n_frost": 350,
+        "n_nights": 3304,
+        "hit_rate": 0.5571428571428572,
+        "false_alarm_ratio": 0.45224719101123595,
+        "false_positive_rate": 0.054502369668246446
+      },
+      "baseline_alarm": {
+        "threshold": 0.0,
+        "tp": 212,
+        "fp": 168,
+        "fn": 138,
+        "tn": 2786,
+        "n_frost": 350,
+        "n_nights": 3304,
+        "hit_rate": 0.6057142857142858,
+        "false_alarm_ratio": 0.4421052631578947,
+        "false_positive_rate": 0.05687203791469194
+      },
+      "reliability": [
+        {
+          "lo": 0,
+          "hi": 0.05,
+          "n": 2389,
+          "mean_p": 0.004789674608509052,
+          "observed": 0.006697362913352867
+        },
+        {
+          "lo": 0.05,
+          "hi": 0.15,
+          "n": 293,
+          "mean_p": 0.09246562061816699,
+          "observed": 0.10238907849829351
+        },
+        {
+          "lo": 0.15,
+          "hi": 0.3,
+          "n": 222,
+          "mean_p": 0.2229638509163828,
+          "observed": 0.26126126126126126
+        },
+        {
+          "lo": 0.3,
+          "hi": 0.5,
+          "n": 171,
+          "mean_p": 0.39259163843538813,
+          "observed": 0.4619883040935672
+        },
+        {
+          "lo": 0.5,
+          "hi": 0.75,
+          "n": 140,
+          "mean_p": 0.6134504795316531,
+          "observed": 0.6285714285714286
+        },
+        {
+          "lo": 0.75,
+          "hi": 1.0,
+          "n": 89,
+          "mean_p": 0.8581530054892433,
+          "observed": 0.8876404494382022
+        }
+      ]
+    },
+    "-1": {
+      "threshold": -1.0,
+      "tp": 182,
+      "fp": 207,
+      "fn": 48,
+      "tn": 2867,
+      "n_frost": 230,
+      "n_nights": 3304,
+      "hit_rate": 0.7913043478260869,
+      "false_alarm_ratio": 0.532133676092545,
+      "false_positive_rate": 0.06733897202342225,
+      "p_on": 0.17,
+      "brier": 0.038858334561688676,
+      "brier_climatology_rate": 0.06476667800127807,
+      "persistence_alarm": {
+        "threshold": -1.0,
+        "tp": 116,
+        "fp": 113,
+        "fn": 114,
+        "tn": 2961,
+        "n_frost": 230,
+        "n_nights": 3304,
+        "hit_rate": 0.5043478260869565,
+        "false_alarm_ratio": 0.49344978165938863,
+        "false_positive_rate": 0.03675992192582954
+      },
+      "baseline_alarm": {
+        "threshold": -1.0,
+        "tp": 139,
+        "fp": 137,
+        "fn": 91,
+        "tn": 2937,
+        "n_frost": 230,
+        "n_nights": 3304,
+        "hit_rate": 0.6043478260869565,
+        "false_alarm_ratio": 0.4963768115942029,
+        "false_positive_rate": 0.044567338972023425
+      },
+      "reliability": [
+        {
+          "lo": 0,
+          "hi": 0.05,
+          "n": 2623,
+          "mean_p": 0.0040699399624153166,
+          "observed": 0.004574914220358368
+        },
+        {
+          "lo": 0.05,
+          "hi": 0.15,
+          "n": 262,
+          "mean_p": 0.09426167846779518,
+          "observed": 0.10305343511450382
+        },
+        {
+          "lo": 0.15,
+          "hi": 0.3,
+          "n": 171,
+          "mean_p": 0.2132242412010485,
+          "observed": 0.28654970760233917
+        },
+        {
+          "lo": 0.3,
+          "hi": 0.5,
+          "n": 129,
+          "mean_p": 0.3877275526643298,
+          "observed": 0.4728682170542636
+        },
+        {
+          "lo": 0.5,
+          "hi": 0.75,
+          "n": 83,
+          "mean_p": 0.6154061411635806,
+          "observed": 0.6385542168674698
+        },
+        {
+          "lo": 0.75,
+          "hi": 1.0,
+          "n": 36,
+          "mean_p": 0.8544568723465784,
+          "observed": 0.7777777777777778
+        }
+      ]
+    },
+    "-2": {
+      "threshold": -2.0,
+      "tp": 107,
+      "fp": 148,
+      "fn": 35,
+      "tn": 3014,
+      "n_frost": 142,
+      "n_nights": 3304,
+      "hit_rate": 0.7535211267605634,
+      "false_alarm_ratio": 0.5803921568627451,
+      "false_positive_rate": 0.04680581910183428,
+      "p_on": 0.15,
+      "brier": 0.025431967312579788,
+      "brier_climatology_rate": 0.04113108184957408,
+      "persistence_alarm": {
+        "threshold": -2.0,
+        "tp": 72,
+        "fp": 70,
+        "fn": 70,
+        "tn": 3092,
+        "n_frost": 142,
+        "n_nights": 3304,
+        "hit_rate": 0.5070422535211268,
+        "false_alarm_ratio": 0.49295774647887325,
+        "false_positive_rate": 0.022137887413029727
+      },
+      "baseline_alarm": {
+        "threshold": -2.0,
+        "tp": 77,
+        "fp": 84,
+        "fn": 65,
+        "tn": 3078,
+        "n_frost": 142,
+        "n_nights": 3304,
+        "hit_rate": 0.5422535211267606,
+        "false_alarm_ratio": 0.5217391304347826,
+        "false_positive_rate": 0.026565464895635674
+      },
+      "reliability": [
+        {
+          "lo": 0,
+          "hi": 0.05,
+          "n": 2820,
+          "mean_p": 0.0032602182251066474,
+          "observed": 0.0031914893617021275
+        },
+        {
+          "lo": 0.05,
+          "hi": 0.15,
+          "n": 229,
+          "mean_p": 0.08917507401619974,
+          "observed": 0.11353711790393013
+        },
+        {
+          "lo": 0.15,
+          "hi": 0.3,
+          "n": 124,
+          "mean_p": 0.21470841730275028,
+          "observed": 0.27419354838709675
+        },
+        {
+          "lo": 0.3,
+          "hi": 0.5,
+          "n": 77,
+          "mean_p": 0.38893519434436424,
+          "observed": 0.4025974025974026
+        },
+        {
+          "lo": 0.5,
+          "hi": 0.75,
+          "n": 39,
+          "mean_p": 0.6034030853012526,
+          "observed": 0.717948717948718
+        },
+        {
+          "lo": 0.75,
+          "hi": 1.0,
+          "n": 15,
+          "mean_p": 0.8368928058636013,
+          "observed": 0.9333333333333333
+        }
+      ]
+    }
+  },
+  "lead_time": {
+    "n_frost_nights": 350,
+    "n_with_alarm": 294,
+    "median_lead_h": 9.0,
+    "p25_lead_h": 6.513888888888889,
+    "p75_lead_h": 11.08888888888889,
+    "share_lead_ge_3h": 0.9864864864864865
+  },
+  "trigger_timing": {
+    "trigger_c": 1.0,
+    "n_compared": 248,
+    "mae_h": 2.2185680494988906,
+    "median_error_h": 0.23442977549404986,
+    "share_within_1h": 0.2620967741935484,
+    "share_within_2h": 0.5,
+    "forecast_reaches_but_obs_not": 132,
+    "frost_night_no_trigger_time": 99
+  },
+  "updates": {
+    "n_nights": 3304,
+    "toggles_plain_cut": 340,
+    "toggles_hysteresis": 144,
+    "p_off": 0.095,
+    "off_updates": 2,
+    "nights_alarmed_by_00_frost": 327,
+    "nights_alarmed_by_00_nofrost": 339,
+    "n_frost_nights": 350,
+    "hit_rate_any_update": 0.9342857142857143
+  },
+  "case_april_2024": {
+    "period": [
+      "2024-04-15",
+      "2024-05-01"
+    ],
+    "by_station": {
+      "AIG": {
+        "frost_nights": 2,
+        "alarmed": 2,
+        "false_alarms": 4,
+        "model_mae": 2.126942202230349,
+        "persistence_mae": 3.7529411764705887,
+        "coldest_obs": -1.2,
+        "coldest_night": "2024-04-21"
+      },
+      "CGI": {
+        "frost_nights": 1,
+        "alarmed": 1,
+        "false_alarms": 2,
+        "model_mae": 1.729581092221908,
+        "persistence_mae": 2.9647058823529413,
+        "coldest_obs": 0.0,
+        "coldest_night": "2024-04-18"
+      },
+      "CHU": {
+        "frost_nights": 0,
+        "alarmed": 0,
+        "false_alarms": 5,
+        "model_mae": 1.6797407655083842,
+        "persistence_mae": 2.241176470588235,
+        "coldest_obs": 1.1,
+        "coldest_night": "2024-04-19"
+      },
+      "MAG": {
+        "frost_nights": 0,
+        "alarmed": 0,
+        "false_alarms": 0,
+        "model_mae": 2.054825792523365,
+        "persistence_mae": 2.423529411764706,
+        "coldest_obs": 0.1,
+        "coldest_night": "2024-04-24"
+      },
+      "SIO": {
+        "frost_nights": 0,
+        "alarmed": 0,
+        "false_alarms": 8,
+        "model_mae": 1.6150427381662662,
+        "persistence_mae": 2.347058823529412,
+        "coldest_obs": 0.1,
+        "coldest_night": "2024-04-20"
+      },
+      "VIS": {
+        "frost_nights": 4,
+        "alarmed": 4,
+        "false_alarms": 4,
+        "model_mae": 1.6670403190187097,
+        "persistence_mae": 3.2882352941176474,
+        "coldest_obs": -2.7,
+        "coldest_night": "2024-04-18"
+      }
+    },
+    "frost_nights_all_stations": 7,
+    "alarmed_all_stations": 7,
+    "false_alarms_all_stations": 23,
+    "model_mae": 1.8121954849448303,
+    "persistence_mae": 2.836274509803922
+  },
+  "regional_gradient": {
+    "g_mixed_k_per_m": -0.005851464452616593,
+    "g_stable_k_per_m": -0.0021117810576167287,
+    "n_night_pairs": 1012,
+    "dz_m": 941.0
+  },
+  "map_case": {
+    "night": "2024-04-18",
+    "station": "VIS",
+    "tmin_forecast_c": -1.6176938878133782,
+    "tmin_observed_c": -2.7,
+    "stability": 0.3416370106761566,
+    "pool_amplitude_c": 1.5,
+    "tmap_p05_c": -6.079342318993476,
+    "tmap_p50_c": -3.2678688904275157,
+    "tmap_p95_c": -1.6215796731383294,
+    "share_area_p_frost_ge_50": 1.0,
+    "p_frost_at_station": 0.7733021761575813
+  },
+  "cooling_profile_fraction_by_hour_after_18": [
+    0.0,
+    0.115,
+    0.255,
+    0.396,
+    0.512,
+    0.615,
+    0.701,
+    0.773,
+    0.83,
+    0.883,
+    0.928,
+    0.968,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ]
+}
