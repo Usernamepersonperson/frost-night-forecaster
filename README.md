@@ -66,8 +66,8 @@ flowchart LR
 - The map is the station forecast plus a terrain offset: cold air pools in hollows and on valley floors on calm clear nights, and a regional gradient between stations adjusts for height.
 
 ## Data sources
-- Hourly station data: MeteoSwiss SwissMetNet, open data (`ogd-smn`), spring months 2010-2026. Source: MeteoSwiss.
-- Terrain: swisstopo swissALTI3D (2 m, averaged to 10 m), a 4 x 5 km window around Visp. Source: Federal Office of Topography swisstopo.
+- Hourly station data: MeteoSwiss SwissMetNet, open data (`ogd-smn`), spring months 2010-2026. Licence CC BY (STAC collection `ch.meteoschweiz.ogd-smn`; opendata.swiss "Open use, must provide the source"). Source: MeteoSwiss.
+- Terrain: swisstopo swissALTI3D (2 m, averaged to 10 m), a 4 x 5 km window around Visp. Terms: opendata.swiss "Open use, must provide the source" (free, including commercial use). Source: Federal Office of Topography swisstopo.
 - Committed data is about 4 MB (`frost_night_forecaster/data/`).
 
 ## What is not verified yet
