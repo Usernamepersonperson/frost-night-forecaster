@@ -79,4 +79,4 @@ flowchart LR
 - Not a certified warning service. Check official forecasts too.
 
 ## Licence
-MIT, Copyright (c) 2026 Victor Bonilla.
+MIT, Copyright (c) 2026 VB-Builds.
